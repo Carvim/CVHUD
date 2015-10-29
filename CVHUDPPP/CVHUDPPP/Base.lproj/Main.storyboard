@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YKw-mn-m59">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--首页-->
+        <scene sceneID="J1C-Yx-ek9">
+            <objects>
+                <viewController id="iPi-uy-iz7" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1ew-vh-LRz"/>
+                        <viewControllerLayoutGuide type="bottom" id="SdN-OO-63c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CTw-Ex-kyo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPg-Hc-I0y">
+                                <rect key="frame" x="125" y="349" width="45" height="30"/>
+                                <state key="normal" title="下一页">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xDp-43-OAu" kind="show" id="GA3-Vk-wqJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYk-ui-Dcd">
+                                <rect key="frame" x="125" y="387" width="75" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="eJL-Pu-fmu"/>
+                                </constraints>
+                                <state key="normal" title="取消显示">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dissmiss:" destination="iPi-uy-iz7" eventType="touchUpInside" id="8gq-oN-eaa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZO-xG-s53">
+                                <rect key="frame" x="30" y="425" width="75" height="30"/>
+                                <state key="normal" title="不挡住后面">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="type1:" destination="iPi-uy-iz7" eventType="touchUpInside" id="fk2-kB-4sn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcD-Jc-f9K">
+                                <rect key="frame" x="125" y="425" width="75" height="30"/>
+                                <state key="normal" title="全部遮住">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="type0:" destination="iPi-uy-iz7" eventType="touchUpInside" id="weF-fc-EOs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzx-nm-adQ">
+                                <rect key="frame" x="30" y="349" width="60" height="30"/>
+                                <state key="normal" title="显示错误">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showError:" destination="iPi-uy-iz7" eventType="touchUpInside" id="t7z-WU-jHp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGE-YB-zyL">
+                                <rect key="frame" x="30" y="387" width="60" height="30"/>
+                                <state key="normal" title="显示成功">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSuccess:" destination="iPi-uy-iz7" eventType="touchUpInside" id="huX-c7-CZq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2TK-hC-4YY">
+                                <rect key="frame" x="30" y="463" width="225" height="30"/>
+                                <state key="normal" title="显示错误信息：反正错了就是错了">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showErrorString:" destination="iPi-uy-iz7" eventType="touchUpInside" id="AjM-JP-n0Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUK-mt-PlK">
+                                <rect key="frame" x="30" y="534" width="195" height="30"/>
+                                <state key="normal" title="挡住后面点击其他区域可取消">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="type2:" destination="iPi-uy-iz7" eventType="touchUpInside" id="vh5-c2-VsD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cY-dw-4AV">
+                                <rect key="frame" x="30" y="501" width="225" height="30"/>
+                                <state key="normal" title="显示成功信息：成功了亲我一个咩">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSuccessString:" destination="iPi-uy-iz7" eventType="touchUpInside" id="VY8-XL-MKe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KYk-ui-Dcd" firstAttribute="leading" secondItem="qPg-Hc-I0y" secondAttribute="leading" id="90w-Jd-TZu"/>
+                            <constraint firstItem="KUK-mt-PlK" firstAttribute="top" secondItem="8cY-dw-4AV" secondAttribute="bottom" constant="3" id="9C1-Il-Zs1"/>
+                            <constraint firstItem="rcD-Jc-f9K" firstAttribute="leading" secondItem="VZO-xG-s53" secondAttribute="trailing" constant="20" id="ADz-eg-dCo"/>
+                            <constraint firstItem="8cY-dw-4AV" firstAttribute="top" secondItem="2TK-hC-4YY" secondAttribute="bottom" constant="8" symbolic="YES" id="CAB-J5-SC8"/>
+                            <constraint firstItem="pzx-nm-adQ" firstAttribute="baseline" secondItem="qPg-Hc-I0y" secondAttribute="baseline" id="Ddj-US-vf1"/>
+                            <constraint firstItem="pzx-nm-adQ" firstAttribute="leading" secondItem="OGE-YB-zyL" secondAttribute="leading" id="Lic-Ks-OqP"/>
+                            <constraint firstItem="2TK-hC-4YY" firstAttribute="leading" secondItem="VZO-xG-s53" secondAttribute="leading" id="Lrs-3S-wMF"/>
+                            <constraint firstItem="OGE-YB-zyL" firstAttribute="top" secondItem="pzx-nm-adQ" secondAttribute="bottom" constant="8" symbolic="YES" id="Lwl-C5-mwa"/>
+                            <constraint firstItem="VZO-xG-s53" firstAttribute="leading" secondItem="OGE-YB-zyL" secondAttribute="leading" id="NFQ-b1-1lY"/>
+                            <constraint firstItem="2TK-hC-4YY" firstAttribute="leading" secondItem="8cY-dw-4AV" secondAttribute="leading" id="PO5-l4-LKU"/>
+                            <constraint firstItem="KUK-mt-PlK" firstAttribute="leading" secondItem="8cY-dw-4AV" secondAttribute="leading" id="VnN-I9-mLX"/>
+                            <constraint firstItem="OGE-YB-zyL" firstAttribute="baseline" secondItem="KYk-ui-Dcd" secondAttribute="baseline" id="bCs-wv-RIR"/>
+                            <constraint firstItem="SdN-OO-63c" firstAttribute="top" secondItem="KUK-mt-PlK" secondAttribute="bottom" constant="36" id="bW6-qW-QJ8"/>
+                            <constraint firstItem="KYk-ui-Dcd" firstAttribute="trailing" secondItem="rcD-Jc-f9K" secondAttribute="trailing" id="jo6-tO-Y86"/>
+                            <constraint firstItem="rcD-Jc-f9K" firstAttribute="leading" secondItem="KYk-ui-Dcd" secondAttribute="leading" id="m3f-fT-Wrq"/>
+                            <constraint firstItem="pzx-nm-adQ" firstAttribute="leading" secondItem="CTw-Ex-kyo" secondAttribute="leadingMargin" constant="14" id="mct-M3-anm"/>
+                            <constraint firstItem="rcD-Jc-f9K" firstAttribute="baseline" secondItem="VZO-xG-s53" secondAttribute="baseline" id="rkE-9t-mGc"/>
+                            <constraint firstItem="2TK-hC-4YY" firstAttribute="top" secondItem="VZO-xG-s53" secondAttribute="bottom" constant="8" symbolic="YES" id="rmf-y1-muG"/>
+                            <constraint firstItem="VZO-xG-s53" firstAttribute="top" secondItem="OGE-YB-zyL" secondAttribute="bottom" constant="8" symbolic="YES" id="uIY-02-mVX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="首页" id="75T-XN-wr5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Orm-i9-beI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="383" y="173"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fHb-4x-OD8">
+            <objects>
+                <viewController id="xDp-43-OAu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wvi-Cg-PI3"/>
+                        <viewControllerLayoutGuide type="bottom" id="icn-3h-Ugb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i9R-oG-hX6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pvD-gC-6Zu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033" y="154"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RJe-xq-Qrn">
+            <objects>
+                <navigationController id="YKw-mn-m59" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lsq-wg-Aks">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iPi-uy-iz7" kind="relationship" relationship="rootViewController" id="FM6-b4-GBP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rlL-ig-Yq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-269" y="149"/>
+        </scene>
+    </scenes>
+</document>
