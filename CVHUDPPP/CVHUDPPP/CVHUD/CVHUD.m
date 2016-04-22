@@ -36,8 +36,7 @@ static CVHUD * singleHUD = nil;
             [singleHUD showImages];
         }
             break;
-        case 1:
-        {
+        case 1: {
             [singleHUD makeALittleWindow];
             [singleHUD showLittleWindowImages];
         }break;
@@ -77,9 +76,9 @@ static CVHUD * singleHUD = nil;
 }
 
 - (void)makeALittleWindow {
-    HUDWindow = [[UIWindow alloc]initWithFrame:CGRectMake(0, 0, WIDTH / 2.0, WIDTH / 2.0)];
-    HUDWindow.center = CGPointMake(WIDTH / 2.0, HEIGHT / 2.0);
-    //HUDWindow.backgroundColor  = [UIColor colorWithRed:0 green:0 blue:0 alpha:.3];
+    HUDWindow = [[UIWindow alloc]initWithFrame:CGRectMake(0, 0, WIDTH/2.0, WIDTH/2.0)];
+    HUDWindow.windowLevel     = UIWindowLevelAlert;
+    HUDWindow.center = CGPointMake(WIDTH/2.0, HEIGHT/3.0);
     [HUDWindow makeKeyAndVisible];
 }
 
@@ -91,6 +90,7 @@ static CVHUD * singleHUD = nil;
     
     UIImageView * imageView     = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, HUDWindow.frame.size.width , HUDWindow.frame.size.height)];
     //imageView.backgroundColor = [UIColor redColor];
+    imageView.center            = CGPointMake(HUDWindow.bounds.size.width/2.0, HUDWindow.bounds.size.height/2.0);
     imageView.animationImages   = arr;
     imageView.contentMode       = UIViewContentModeScaleAspectFit;
     imageView.animationDuration = 0.5;
@@ -108,7 +108,7 @@ static CVHUD * singleHUD = nil;
     }
     
     UIImageView * imageView     = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, HUDWindow.frame.size.width / 2, HUDWindow.frame.size.width / 2)];
-    imageView.center            = HUDWindow.center;
+    imageView.center            = CGPointMake(HUDWindow.center.x, HEIGHT/3.0);
     //imageView.backgroundColor = [UIColor redColor];
     imageView.animationImages   = arr;
     imageView.contentMode       = UIViewContentModeScaleAspectFit;
@@ -150,7 +150,7 @@ static CVHUD * singleHUD = nil;
 
 - (void)showErrorOrSuccessImage:(BOOL)state tips:(NSString*)string {
     UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, HUDWindow.frame.size.width / 2, HUDWindow.frame.size.width / 2)];
-    imageView.center      = HUDWindow.center;
+    imageView.center      = CGPointMake(HUDWindow.center.x, HEIGHT/3.0);
     imageView.image       = state == YES ? [UIImage imageNamed:@"success.jpg"] :[UIImage imageNamed:@"error.jpg"];
     imageView.contentMode = UIViewContentModeScaleAspectFit;
     [imageView.layer setMasksToBounds:YES];

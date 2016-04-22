@@ -40,7 +40,7 @@
     [CVHUD ShowSuccess];
 }
 - (IBAction)showErrorString:(id)sender {
-    [CVHUD ShowErrorWithTips:@"反正错了就是错了,反正错了就是错了,反正错了就是错了,反正错了就是错了"];
+    [CVHUD ShowErrorWithTips:@"反正错了就是错了"];
 }
 - (IBAction)showSuccessString:(id)sender {
     [CVHUD ShowSuccessWithTips:@"成功了亲我一个咩"];
